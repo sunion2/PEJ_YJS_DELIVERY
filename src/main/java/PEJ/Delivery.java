@@ -46,7 +46,7 @@ public class Delivery {
     @PreUpdate
     public void onPreUpdate() {
 
-        System.out.println("###onPreUpdate()" + deliveryStatus);
+        System.out.println("####onPreUpdate()" + deliveryStatus);
         if("CANCELLED".equals(deliveryStatus)) {
             DeliveryCancelled DeliveryCancelled = new DeliveryCancelled();
             BeanUtils.copyProperties(this, DeliveryCancelled);
